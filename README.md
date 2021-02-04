@@ -14,7 +14,7 @@ To work properly delete created branches after merging them.
 
 **Required** The branch you want to make the pull request from.
 
-### `TARGET_BRANCH_STARS_WITH`
+### `TARGET_BRANCH_STARTS_WITH`
 
 **Required** The branchs you want to make the pull request to.
 
@@ -39,7 +39,7 @@ on:
 
 jobs:
   sync-branches:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Syncing branches
     steps:
       - name: Checkout
@@ -48,12 +48,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Create Sync PR
-        uses: sudoStatus200/create-sync-pr@0.3.1
+      - name: Sync Branches PR
+        uses: monoku/sync-branches-pr@0.0.1
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "master"
-          TARGET_BRANCH_STARS_WITH: "feature/"
+          TARGET_BRANCH_STARTS_WITH: "feature/"
 ```
 
 Modified version of action [Create Sync PR](https://github.com/sudoStatus200/create-sync-pr) with support of multiple target branches matching with a given pattern.

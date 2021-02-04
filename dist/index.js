@@ -560,7 +560,7 @@ const createBranch = __webpack_require__(503);
 async function run() {
   try {
     const sourceBranch = core.getInput("SOURCE_BRANCH", { required: true });
-    const targetBranchPattern = core.getInput("TARGET_BRANCH_STARS_WITH", {
+    const targetBranchPattern = core.getInput("TARGET_BRANCH_STARTS_WITH", {
       required: true,
     });
     const githubToken = core.getInput("GITHUB_TOKEN", { required: true });
