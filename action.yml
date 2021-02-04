@@ -1,0 +1,23 @@
+name: "Sync branches PR"
+description: "Github Action to create PR for syncing multiple branches matching with a given pattern."
+branding:
+  icon: git-pull-request
+  color: green
+inputs:
+  GITHUB_TOKEN:
+    description: "User token to be associated with this pull request."
+    required: true
+  SOURCE_BRANCH:
+    description: "Branch from make pull-request from"
+    required: true
+  TARGET_BRANCH_STARS_WITH:
+    description: "Branch to make the pull-request against"
+    required: true
+outputs:
+  PULL_REQUEST_URL:
+    description: "URL for either the generated pull request or the currently open one"
+  PULL_REQUEST_NUMBER:
+    description: "Pull request number from generated pull request or the currently open one"
+runs:
+  using: "node12"
+  main: "dist/index.js"
