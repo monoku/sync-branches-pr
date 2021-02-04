@@ -14,7 +14,7 @@ To work properly delete created branches after merging them.
 
 **Required** The branch you want to make the pull request from.
 
-### `TARGET_BRANCH_STARS_WITH`
+### `TARGET_BRANCH_STARTS_WITH`
 
 **Required** The branchs you want to make the pull request to.
 
@@ -53,7 +53,7 @@ jobs:
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "master"
-          TARGET_BRANCH_STARS_WITH: "feature/"
+          TARGET_BRANCH_STARTS_WITH: "feature/"
 ```
 
 Modified version of action [Create Sync PR](https://github.com/sudoStatus200/create-sync-pr) with support of multiple target branches matching with a given pattern.
