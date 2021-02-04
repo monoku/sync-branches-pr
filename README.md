@@ -48,8 +48,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12
-      - name: Create Sync PR
-        uses: sudoStatus200/create-sync-pr@0.3.1
+      - name: Sync Branches PR
+        uses: monoku/sync-branches-pr@0.0.1
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "master"
