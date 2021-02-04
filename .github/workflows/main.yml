@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync-feature-branches:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Syncing feature branches
     steps:
       - name: Checkout

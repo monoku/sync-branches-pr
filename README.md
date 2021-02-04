@@ -39,7 +39,7 @@ on:
 
 jobs:
   sync-branches:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Syncing branches
     steps:
       - name: Checkout
