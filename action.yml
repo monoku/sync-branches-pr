@@ -10,7 +10,7 @@ inputs:
   SOURCE_BRANCH:
     description: "Branch from make pull-request from"
     required: true
-  TARGET_BRANCH_STARS_WITH:
+  TARGET_BRANCH_STARTS_WITH:
     description: "Branch to make the pull-request against"
     required: true
 outputs:

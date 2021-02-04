@@ -6,7 +6,7 @@ on:
 
 jobs:
   sync-feature-branches:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     name: Syncing feature branches
     steps:
       - name: Checkout
@@ -21,4 +21,4 @@ jobs:
         with:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           SOURCE_BRANCH: "master"
-          TARGET_BRANCH_STARS_WITH: "feature/"
+          TARGET_BRANCH_STARTS_WITH: "feature/"
